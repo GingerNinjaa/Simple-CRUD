@@ -20,16 +20,10 @@ namespace UI.Administration
         private void AllEmployee_Load(object sender, EventArgs e)
         {
         }
-        public void AllEmployeeTableUpdate()
-        {
-            dataGridView1.Update();
-            dataGridView1.Refresh();
-        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            timer1.Interval = 4000;
-            AllEmployeeTableUpdate();
+
         }
     }
 }

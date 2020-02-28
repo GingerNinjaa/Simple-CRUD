@@ -72,6 +72,12 @@
     <Compile Include="Administration\AllEmployee.Designer.cs">
       <DependentUpon>AllEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common\ResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\ResetPassword.Designer.cs">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Common\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\AllEmployee.resx">
       <DependentUpon>AllEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ResetPassword.resx">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

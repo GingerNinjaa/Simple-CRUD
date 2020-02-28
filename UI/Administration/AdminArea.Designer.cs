@@ -50,6 +50,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.panel1.Controls.Add(this.btnDeleteEmployee);
             this.panel1.Controls.Add(this.btnAdminAllEmployee);
             this.panel1.Controls.Add(this.btnAdminChangePassword);
@@ -84,12 +85,13 @@
             // 
             // btnAdminAddEmployee
             // 
+            this.btnAdminAddEmployee.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnAdminAddEmployee.Location = new System.Drawing.Point(247, 12);
             this.btnAdminAddEmployee.Name = "btnAdminAddEmployee";
             this.btnAdminAddEmployee.Size = new System.Drawing.Size(139, 23);
             this.btnAdminAddEmployee.TabIndex = 4;
             this.btnAdminAddEmployee.Text = "Add Employee";
-            this.btnAdminAddEmployee.UseVisualStyleBackColor = true;
+            this.btnAdminAddEmployee.UseVisualStyleBackColor = false;
             this.btnAdminAddEmployee.Click += new System.EventHandler(this.btnAdminAddEmployee_Click);
             // 
             // panelChildFormAdmin

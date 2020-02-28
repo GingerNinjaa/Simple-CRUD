@@ -157,5 +157,12 @@ namespace UI.Common
                 btnLogin_Click(sender, e);
             }
         }
+
+        private void linkPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            var reset = new ResetPassword();
+            reset.Show();
+        }
     }
 }

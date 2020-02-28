@@ -169,6 +169,7 @@
             this.linkPass.TabIndex = 6;
             this.linkPass.TabStop = true;
             this.linkPass.Text = "Have you forgotten your password ?";
+            this.linkPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkPass_LinkClicked);
             // 
             // pictureBoxClosse
             // 
