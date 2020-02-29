@@ -34,7 +34,7 @@ namespace BusinessLogic
 
                 if (isValid == false)
                 {
-                    //throw new Exception("Wrong Data");
+                    throw new Exception("Wrong Data");
                 }
                 else
                 {

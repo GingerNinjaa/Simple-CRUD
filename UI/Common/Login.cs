@@ -110,16 +110,16 @@ namespace UI.Common
 
             try
             {
-                log.Logowanie();
 
+                log.Logowanie();
                 this.Hide();
                 var menu = new MainBoard();
                 menu.Show();
                 this.Alert("Access granted", Messages.enmType.Success);
             }
-            catch (Exception e)
+            catch (Exception )
             {
-                 this.Alert(e.ToString(), Messages.enmType.Error); 
+                 this.Alert("Wrong Data", Messages.enmType.Error); 
             }
             
 
