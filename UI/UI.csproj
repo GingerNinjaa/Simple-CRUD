@@ -175,6 +175,7 @@
       <DependentUpon>AllStock.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Data.tblPosition.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -192,6 +193,14 @@
     <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
       <Project>{10E27085-640C-40E1-B06D-4A97CD461FD3}</Project>
       <Name>BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cache\Cache.csproj">
+      <Project>{5926BCC1-8C9C-46AE-865C-8D661BF602B7}</Project>
+      <Name>Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{E146A728-0E53-4ED3-90C0-B79EF060886D}</Project>
+      <Name>Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using UI.Stock;
 using UI.Administration;
+using Cache;
 
 namespace UI.Common
 {
@@ -157,6 +158,10 @@ namespace UI.Common
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.Alert("Logout", Messages.enmType.Info);
+
+            //Clear cache
+            ActiveUser.Reset();
+
 
             this.Hide();
             var login = new Login();

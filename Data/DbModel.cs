@@ -11,6 +11,7 @@ namespace Data
        
 
         public virtual DbSet<tblUser> Users { get; set; }
+        public virtual DbSet<tblPosition> Positions { get; set; }
         public virtual DbSet<tblArticle> Articles { get; set; }
 
 

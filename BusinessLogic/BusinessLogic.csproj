@@ -53,6 +53,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddUser.cs" />
+    <Compile Include="EditUserData.cs" />
     <Compile Include="Login_access.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

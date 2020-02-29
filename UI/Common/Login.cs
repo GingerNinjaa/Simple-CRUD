@@ -121,8 +121,9 @@ namespace UI.Common
             {
                  this.Alert("Wrong Data", Messages.enmType.Error); 
             }
-            
 
+            
+            
 
         }
         // Logowanie do Systemu 

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using UI.Common;
+using Data;
 
 namespace UI.Administration
 {
@@ -17,8 +18,17 @@ namespace UI.Administration
         public AddEmployee()
         {
             InitializeComponent();
+            
 
-
+        }
+        private void FillComboBox()
+        {
+            using (DbModel db = new DbModel())
+            {
+                cbAdminPickPosition.DataSource = db.Positions.ToList();
+                cbAdminPickPosition.ValueMember = "PositionId";
+                cbAdminPickPosition.DisplayMember = "PositionName";
+            }
         }
 
         //Turbo ważne do przesuwanie okienka PART 2
@@ -33,14 +43,16 @@ namespace UI.Administration
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
         private void Alert(string msg, Messages.enmType type)
         {
             Messages popup = new Messages();
             popup.showAlert(msg, type);
         }
+
         private void AddEmployee_Load(object sender, EventArgs e)
         {
-
+            FillComboBox();
         }
         private void btnAdminAddClose_Click(object sender, EventArgs e)
         {
@@ -48,46 +60,40 @@ namespace UI.Administration
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            /*
-            //Adding new user to the database
-            tblUser model = new tblUser();
-
-            if (txtAdminAddPassword.Text != txtAdminAddPasswordConfirm.Text)
-            {
-                //RedPopup
-                this.Alert("passwords are not the same", Messages.Messages.enmType.Error);
-            }
-
-            model.FirstName = txtAdminAddFirstName.Text;
-            model.LastName = txtAdminAddLastName.Text;
-            model.Email = txtAdminAddEmail.Text;
-            model.UserName = txtAdminAddUserName.Text;
-            model.Password = txtAdminAddPassword.Text;
-            model.Position = cbAdminPickPosition.Text;
-            model.Role = cbAdminPickRole.Text;
-
             try
             {
-                using (DB db = new DB())
-                {
-                    db.Users.Add(model);
-                    db.SaveChanges();
-                }
+                AddNew();
+                this.Alert("User Added", Messages.enmType.Success);
+                ClearBoard();
 
-                this.Alert("User added", Messages.Messages.enmType.Success);
             }
-            catch (System.Data.Entity.Validation.DbEntityValidationException)
+            catch (Exception ex)
             {
 
-                this.Alert("Fail", Messages.Messages.enmType.Error);
+
+                this.Alert(ex.Message, Messages.enmType.Error);
             }
-            */
         }
 
-        private void cbAdminPickPosition_SelectedIndexChanged(object sender, EventArgs e)
+        private void AddNew()
         {
+            BusinessLogic.AddUser add = new BusinessLogic.AddUser
+                                       (txtAdminAddFirstName.Text, txtAdminAddPassword.Text,txtAdminAddPasswordConfirm.Text, txtAdminAddFirstName.Text,
+                                       txtAdminAddLastName.Text, cbAdminPickPosition.Text, txtAdminAddEmail.Text);
 
+            add.AddNewUser();
         }
+
+        private void ClearBoard()
+        {
+            txtAdminAddEmail.Text = null;
+            txtAdminAddFirstName.Text = null;
+            txtAdminAddLastName.Text = null;
+            txtAdminAddPassword.Text = null;
+            txtAdminAddPasswordConfirm.Text = null;
+            txtAdminAddUserName.Text = null;
+        }
+       
 
         private void btnClose_Click(object sender, EventArgs e)
         {    

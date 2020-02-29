@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,7 +36,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.cbAdminPickPosition = new System.Windows.Forms.ComboBox();
-            this.tblUserRolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtAdminAddPasswordConfirm = new System.Windows.Forms.TextBox();
             this.txtAdminAddPassword = new System.Windows.Forms.TextBox();
             this.txtAdminAddUserName = new System.Windows.Forms.TextBox();
@@ -46,155 +44,148 @@
             this.txtAdminAddFirstName = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.tblUserRolesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.tblUserRolesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblUserRolesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Honeydew;
             this.label3.Location = new System.Drawing.Point(14, 29);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 25);
+            this.label3.Size = new System.Drawing.Size(126, 25);
             this.label3.TabIndex = 15;
             this.label3.Text = "First Name";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Honeydew;
             this.label1.Location = new System.Drawing.Point(14, 86);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 25);
+            this.label1.Size = new System.Drawing.Size(124, 25);
             this.label1.TabIndex = 16;
             this.label1.Text = "Last Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Honeydew;
             this.label2.Location = new System.Drawing.Point(14, 139);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 25);
+            this.label2.Size = new System.Drawing.Size(70, 25);
             this.label2.TabIndex = 17;
             this.label2.Text = "Email";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Honeydew;
             this.label4.Location = new System.Drawing.Point(14, 229);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 25);
+            this.label4.Size = new System.Drawing.Size(128, 25);
             this.label4.TabIndex = 18;
             this.label4.Text = "User Name";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Honeydew;
             this.label5.Location = new System.Drawing.Point(14, 276);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 25);
+            this.label5.Size = new System.Drawing.Size(114, 25);
             this.label5.TabIndex = 19;
             this.label5.Text = "Password";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.Honeydew;
             this.label7.Location = new System.Drawing.Point(14, 396);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 25);
+            this.label7.Size = new System.Drawing.Size(97, 25);
             this.label7.TabIndex = 21;
             this.label7.Text = "Position";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.Honeydew;
             this.label9.Location = new System.Drawing.Point(14, 314);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(193, 25);
+            this.label9.Size = new System.Drawing.Size(202, 25);
             this.label9.TabIndex = 23;
             this.label9.Text = "Confirm Password";
             // 
             // cbAdminPickPosition
             // 
-            this.cbAdminPickPosition.DataSource = this.tblUserRolesBindingSource;
-            this.cbAdminPickPosition.DisplayMember = "RoleName";
             this.cbAdminPickPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAdminPickPosition.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.cbAdminPickPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cbAdminPickPosition.FormattingEnabled = true;
             this.cbAdminPickPosition.Location = new System.Drawing.Point(203, 392);
             this.cbAdminPickPosition.Name = "cbAdminPickPosition";
-            this.cbAdminPickPosition.Size = new System.Drawing.Size(172, 29);
+            this.cbAdminPickPosition.Size = new System.Drawing.Size(172, 28);
             this.cbAdminPickPosition.TabIndex = 24;
-            this.cbAdminPickPosition.ValueMember = "RoleName";
-            this.cbAdminPickPosition.SelectedIndexChanged += new System.EventHandler(this.cbAdminPickPosition_SelectedIndexChanged);
             // 
             // txtAdminAddPasswordConfirm
             // 
-            this.txtAdminAddPasswordConfirm.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtAdminAddPasswordConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtAdminAddPasswordConfirm.Location = new System.Drawing.Point(237, 312);
             this.txtAdminAddPasswordConfirm.Name = "txtAdminAddPasswordConfirm";
-            this.txtAdminAddPasswordConfirm.Size = new System.Drawing.Size(200, 27);
+            this.txtAdminAddPasswordConfirm.Size = new System.Drawing.Size(200, 26);
             this.txtAdminAddPasswordConfirm.TabIndex = 29;
             // 
             // txtAdminAddPassword
             // 
-            this.txtAdminAddPassword.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtAdminAddPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtAdminAddPassword.Location = new System.Drawing.Point(237, 274);
             this.txtAdminAddPassword.Name = "txtAdminAddPassword";
-            this.txtAdminAddPassword.Size = new System.Drawing.Size(200, 27);
+            this.txtAdminAddPassword.Size = new System.Drawing.Size(200, 26);
             this.txtAdminAddPassword.TabIndex = 30;
             // 
             // txtAdminAddUserName
             // 
-            this.txtAdminAddUserName.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtAdminAddUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtAdminAddUserName.Location = new System.Drawing.Point(237, 229);
             this.txtAdminAddUserName.Name = "txtAdminAddUserName";
-            this.txtAdminAddUserName.Size = new System.Drawing.Size(200, 27);
+            this.txtAdminAddUserName.Size = new System.Drawing.Size(200, 26);
             this.txtAdminAddUserName.TabIndex = 31;
             // 
             // txtAdminAddEmail
             // 
-            this.txtAdminAddEmail.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtAdminAddEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtAdminAddEmail.Location = new System.Drawing.Point(237, 137);
             this.txtAdminAddEmail.Name = "txtAdminAddEmail";
-            this.txtAdminAddEmail.Size = new System.Drawing.Size(200, 27);
+            this.txtAdminAddEmail.Size = new System.Drawing.Size(200, 26);
             this.txtAdminAddEmail.TabIndex = 32;
             // 
             // txtAdminAddLastName
             // 
-            this.txtAdminAddLastName.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtAdminAddLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtAdminAddLastName.Location = new System.Drawing.Point(237, 86);
             this.txtAdminAddLastName.Name = "txtAdminAddLastName";
-            this.txtAdminAddLastName.Size = new System.Drawing.Size(200, 27);
+            this.txtAdminAddLastName.Size = new System.Drawing.Size(200, 26);
             this.txtAdminAddLastName.TabIndex = 33;
             // 
             // txtAdminAddFirstName
             // 
-            this.txtAdminAddFirstName.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtAdminAddFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtAdminAddFirstName.Location = new System.Drawing.Point(237, 29);
             this.txtAdminAddFirstName.Name = "txtAdminAddFirstName";
-            this.txtAdminAddFirstName.Size = new System.Drawing.Size(200, 27);
+            this.txtAdminAddFirstName.Size = new System.Drawing.Size(200, 26);
             this.txtAdminAddFirstName.TabIndex = 34;
             // 
             // button1
@@ -251,8 +242,6 @@
             this.Text = "AddEmployee";
             this.Load += new System.EventHandler(this.AddEmployee_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseDown);
-            ((System.ComponentModel.ISupportInitialize)(this.tblUserRolesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblUserRolesBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,7 +266,5 @@
         private System.Windows.Forms.TextBox txtAdminAddFirstName;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.BindingSource tblUserRolesBindingSource;
-        private System.Windows.Forms.BindingSource tblUserRolesBindingSource1;
     }
 }

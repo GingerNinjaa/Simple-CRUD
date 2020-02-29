@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLogic;
+using Cache;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +14,10 @@ namespace UI.Common
 {
     public partial class User : Form
     {
-       // tblUser CurentUser = new tblUser();
+
         public User()
         {
-            //CurentUser = user;
+
             InitializeComponent();
             setUserData();
         }
@@ -28,20 +30,20 @@ namespace UI.Common
 
         private void setUserData()
         {
-            /*
+
             //Show part
-            lblUserNameShow.Text = CurentUser.UserName;
-            lblFirstNameShow.Text = CurentUser.FirstName;
-            lblLastNameShow.Text = CurentUser.LastName;
-            lblEmailShow.Text = CurentUser.Email;
-            lblPositionShow.Text = CurentUser.Position;
+            lblUserNameShow.Text = ActiveUser.c_UserName;
+            lblFirstNameShow.Text = ActiveUser.c_FirstName;
+            lblLastNameShow.Text = ActiveUser.c_LastName;
+            lblEmailShow.Text = ActiveUser.c_Email;
+            lblPositionShow.Text = ActiveUser.c_Position;
 
             //Edit part
-            txtUserNameEdit.Text = CurentUser.UserName.ToString();
-            txtFirstNameEdit.Text = CurentUser.FirstName.ToString();
-            txtLastNameEdit.Text = CurentUser.LastName.ToString();
-            txtEmailEdit.Text = CurentUser.Email.ToString();
-            */
+            txtUserNameEdit.Text = ActiveUser.c_UserName;
+            txtFirstNameEdit.Text = ActiveUser.c_FirstName;
+            txtLastNameEdit.Text = ActiveUser.c_LastName;
+            txtEmailEdit.Text = ActiveUser.c_Email;
+
         }
 
 
@@ -112,24 +114,24 @@ namespace UI.Common
 
         private void txtLastNameEdit_Leave(object sender, EventArgs e)
         {
-        /*
-            if (txtLastNameEdit.Text == "")
-            {
-                txtLastNameEdit.Text = CurentUser.LastName.ToString();
+            /*
+                if (txtLastNameEdit.Text == "")
+                {
+                    txtLastNameEdit.Text = CurentUser.LastName.ToString();
 
-            }
-            */
+                }
+                */
         }
 
         private void txtEmailEdit_Enter(object sender, EventArgs e)
         {
-        /*
-            if (txtEmailEdit.Text == CurentUser.Email.ToString())
-            {
-                txtEmailEdit.Text = "";
+            /*
+                if (txtEmailEdit.Text == CurentUser.Email.ToString())
+                {
+                    txtEmailEdit.Text = "";
 
-            }
-            */
+                }
+                */
 
         }
 
@@ -150,7 +152,7 @@ namespace UI.Common
 
         private void txtPasswordEdit_TextChanged(object sender, EventArgs e)
         {
-           txtPasswordEdit.UseSystemPasswordChar = true;
+            txtPasswordEdit.UseSystemPasswordChar = true;
         }
 
         private void txtPasswordConfEdit_TextChanged(object sender, EventArgs e)
@@ -165,50 +167,30 @@ namespace UI.Common
 
         private void btnEditUserDataSave_Click(object sender, EventArgs e)
         {
-            /*
-            using (DB db = new DB())
+            try
             {
-                if (db.Users.Any(x => x.UserName.Equals(txtUserNameEdit.Text)) && CurentUser.UserName != lblUserNameShow.Text)
-                {
-                    //wyswietli ten czerwony prostokąt
-                    this.Alert("Username is taken", Messages.enmType.Error);
-                }
-                else if (txtPasswordEdit.Text != txtPasswordConfEdit.Text)
-                {
-                    //wyswietli ten czerwony prostokąt
-                    this.Alert("passwords are not the same", Messages.enmType.Error);
-                }
-                else
-                {
-                    this.CurentUser.UserId = this.CurentUser.UserId;
-                    this.CurentUser.UserName = txtUserNameEdit.Text.Trim();
-                    this.CurentUser.FirstName = txtFirstNameEdit.Text.Trim();
-                    this.CurentUser.LastName = txtLastNameEdit.Text.Trim();
-                    this.CurentUser.Email = txtEmailEdit.Text.Trim();
-
-                    if (txtPasswordEdit.Text != "" && txtPasswordConfEdit.Text != "")
-                    {
-                        if (txtPasswordEdit.Text == txtPasswordConfEdit.Text)
-                        {
-                            this.CurentUser.Password = txtPasswordConfEdit.Text.Trim();
-                        }
-                    }
-
-                    //if admin
-                    this.CurentUser.Position = "User";
-                    this.CurentUser.Role = "User";
-
-
-                    db.Entry(CurentUser).State = EntityState.Modified;
-                    db.SaveChanges();
-
-                    //ten zielony komunikat
-                    this.Alert("Edit succes", Messages.enmType.Success);
-                }
+                Edit();
+                this.Alert("Data Edited", Messages.enmType.Success);
             }
-            */
-        }
+            catch (Exception ex)
+            {
 
+                this.Alert(ex.Message, Messages.enmType.Error);
+            }
+
+            txtPasswordConfEdit.Text = "";
+            txtPasswordEdit.Text = "";
+
+            setUserData();
+        }
+        private void Edit()
+        {
+            EditUserData edit = new EditUserData
+                                (ActiveUser.c_Id, txtUserNameEdit.Text, txtFirstNameEdit.Text, txtLastNameEdit.Text,
+                                txtEmailEdit.Text, ActiveUser.c_Position, txtPasswordEdit.Text, txtPasswordConfEdit.Text);
+
+            edit.EditUser();
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             panel1.Hide();

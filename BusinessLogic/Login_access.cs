@@ -23,6 +23,7 @@ namespace BusinessLogic
 
         public void Logowanie()
         {
+
             bool isValid = false;
 
             using (DbModel db = new DbModel())
