@@ -61,6 +61,7 @@
     <Compile Include="tblArticle.cs" />
     <Compile Include="DbModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tblCategory.cs" />
     <Compile Include="tblPosition.cs" />
     <Compile Include="tblUser.cs" />
   </ItemGroup>

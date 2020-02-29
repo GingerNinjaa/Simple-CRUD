@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using UI.Common;
+using BusinessLogic;
+using Data;
 
 namespace UI.Stock
 {
@@ -58,7 +60,7 @@ namespace UI.Stock
 
         private void AddStock_Load(object sender, EventArgs e)
         {
-
+            FillComboBox();
         }
 
         private void btnClose_Click_1(object sender, EventArgs e)
@@ -71,31 +73,33 @@ namespace UI.Stock
 
         private void btnAddArticle_Click(object sender, EventArgs e)
         {
-            /*
-            tblProducts model = new tblProducts();
-
             try
             {
-                using (DB db = new DB())
-                {
-                    model.Name = txtAddProductName.Text;
-                    model.Description = txtAddProductDescription.Text;
-                    model.Price = decimal.Parse(txtAddProductPrice.Text);
-                    model.CategoryName = cbAddProductCategory.Text;
+                AddNewArticle();
+                ClearBoard();
 
-                    db.Products.Add(model);
-                    db.SaveChanges();
-                }
-                this.Alert("Article added", Messages.Messages.enmType.Success);
-                //MessageBox.Show("XD", "OK");
-
+                this.Alert("Article added", Messages.enmType.Success);  //Messages.Messages.enmType.Success
             }
-            catch (System.Data.Entity.Validation.DbEntityValidationException)
+            catch (Exception ex)
             {
-                this.Alert("Error", Messages.Messages.enmType.Error);
-                //MessageBox.Show("XD", "FAIL");
+                this.Alert(ex.Message, Messages.enmType.Error);
             }
-           */
+
+            
+            //System.Data.Entity.Validation.DbEntityValidationException
+        }
+
+        private void AddNewArticle()
+        {
+            AddArticle add = new AddArticle(txtAddProductName.Text,txtAddProductDescription.Text,decimal.Parse(txtAddProductPrice.Text),cbAddProductCategory.Text);
+
+            add.NewArticle();
+        }
+        private void ClearBoard()
+        {
+            txtAddProductName.Text = null;
+            txtAddProductDescription.Text = null;
+            txtAddProductPrice.Text = null;
         }
 
         private void btnAddProductClear_Click(object sender, EventArgs e)
@@ -104,6 +108,15 @@ namespace UI.Stock
             txtAddProductDescription.Text = "";
             txtAddProductPrice.Text = "";
             cbAddProductCategory.Text = "";
+        }
+        private void FillComboBox()
+        {
+            using (DbModel db = new DbModel())
+            {
+                cbAddProductCategory.DataSource = db.Categories.ToList();
+                cbAddProductCategory.ValueMember = "CategoryId";
+                cbAddProductCategory.DisplayMember = "CategoryName";
+            }
         }
     }
 }

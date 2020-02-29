@@ -18,8 +18,6 @@ namespace UI.Administration
         public AddEmployee()
         {
             InitializeComponent();
-            
-
         }
         private void FillComboBox()
         {
@@ -65,12 +63,9 @@ namespace UI.Administration
                 AddNew();
                 this.Alert("User Added", Messages.enmType.Success);
                 ClearBoard();
-
             }
             catch (Exception ex)
             {
-
-
                 this.Alert(ex.Message, Messages.enmType.Error);
             }
         }

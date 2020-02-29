@@ -16,12 +16,9 @@ namespace UI.Common
 {
     public partial class MainBoard : Form
     {
-        //tblUser CurentUser = new tblUser();
           AddStock addstock = new AddStock();
         public MainBoard()
         {
-            //this.CurentUser = dto;
-
             InitializeComponent();
             customizeDesing();
 /*
@@ -68,8 +65,6 @@ namespace UI.Common
 
         }
 
-  
-
         private void showSubMenu(Panel subMenu)
         {
             // jeśli submenu jest schowane 
@@ -107,7 +102,6 @@ namespace UI.Common
    
         private void button6_Click(object sender, EventArgs e)
         {
-
             addstock.Visible = !addstock.Visible;
         }
 
@@ -116,8 +110,6 @@ namespace UI.Common
         }
 
         #endregion
-
-
 
         private Form activeForm = null;
         private void openChildForm(Form childForm)
@@ -167,12 +159,8 @@ namespace UI.Common
             var login = new Login();
             login.Show();
         }
-
-
-
         private void btnAdministration_Click(object sender, EventArgs e)
         {
-
            openChildForm(new AdminArea());
         }
 
