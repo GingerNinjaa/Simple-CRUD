@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E146A728-0E53-4ED3-90C0-B79EF060886D}</ProjectGuid>
+    <ProjectGuid>{10E27085-640C-40E1-B06D-4A97CD461FD3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Data</RootNamespace>
-    <AssemblyName>Data</AssemblyName>
+    <RootNamespace>BusinessLogic</RootNamespace>
+    <AssemblyName>BusinessLogic</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -40,11 +40,11 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Build.Framework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,24 +53,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202002282208246_test.cs" />
-    <Compile Include="Migrations\202002282208246_test.designer.cs">
-      <DependentUpon>202002282208246_test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="tblArticle.cs" />
-    <Compile Include="DbModel.cs" />
+    <Compile Include="Login_access.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="tblUser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cache\Cache.csproj">
+      <Project>{5926BCC1-8C9C-46AE-865C-8D661BF602B7}</Project>
+      <Name>Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{E146A728-0E53-4ED3-90C0-B79EF060886D}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202002282208246_test.resx">
-      <DependentUpon>202002282208246_test.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

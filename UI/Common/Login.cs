@@ -1,4 +1,5 @@
 ﻿using System;
+using BusinessLogic;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 //Przesuwanie okien PART 1
 using System.Runtime.InteropServices;
+
 
 
 namespace UI.Common
@@ -102,52 +104,31 @@ namespace UI.Common
         }
         #endregion
 
+        private void GetAccess()
+        {
+            Login_access log = new Login_access(txtLogin.Text,txtPassword.Text);
 
+            try
+            {
+                log.Logowanie();
+
+                this.Hide();
+                var menu = new MainBoard();
+                menu.Show();
+                this.Alert("Access granted", Messages.enmType.Success);
+            }
+            catch (Exception e)
+            {
+                 this.Alert(e.ToString(), Messages.enmType.Error); 
+            }
+            
+
+
+        }
         // Logowanie do Systemu 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
-            this.Hide();
-            var menu = new MainBoard();
-            menu.Show();
-            this.Alert("Access granted", Messages.enmType.Success);
-            /*
-            bool isvalid = false;         
-            //CompanyDBEntities
-            using (DB db = new DB())
-            {
-                
-                if (db.Users.Any(x => x.UserName.Equals(txtLogin.Text) && x.Password.Equals(txtPassword.Text)))
-                {
-                    isvalid = true;
-                    
-                    //UserDTO dto  = db.tblUser.FirstOrDefault(x => x.UserName)
-                }
-            }
-
-            if (isvalid == false)
-            {
-                this.Alert("Wrong login or password", Messages.enmType.Error);
-                //MessageBox.Show("error", "error");
-            }
-            else
-            {
-                tblUser CurentUser = new tblUser();
-
-                using (DB db = new DB())
-                {
-                    CurentUser = db.Users.FirstOrDefault(x => x.UserName == txtLogin.Text);
-                }
-
-                //Close Login and open MainBoard
-                this.Alert("Access granted", Messages.enmType.Success);
-                this.Hide();
-                var menu = new MainBoard(CurentUser);
-                menu.Show();
-                
-            }
-            */
-
+            GetAccess();
         }
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
