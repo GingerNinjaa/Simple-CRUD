@@ -164,6 +164,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Stock\AddCategory.resx">
       <DependentUpon>AddCategory.cs</DependentUpon>
@@ -202,6 +203,25 @@
       <Project>{E146A728-0E53-4ED3-90C0-B79EF060886D}</Project>
       <Name>Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Icons\add_item_32px.png" />
+    <Content Include="Icons\admin_settings_male_32px.png" />
+    <Content Include="Icons\box_32px.png" />
+    <Content Include="Icons\cancel_32px.png" />
+    <Content Include="Icons\close_window_32px.png" />
+    <Content Include="Icons\depot_32px.png" />
+    <Content Include="Icons\information_32px.png" />
+    <Content Include="Icons\succes_32px.png" />
+    <Content Include="Icons\warning_shield_32px.png" />
+    <None Include="Icons\edit_property_32px.png" />
+    <Content Include="Icons\help_32px.png" />
+    <Content Include="Icons\logout_rounded_down_32px.png" />
+    <Content Include="Icons\submit_for_approval_32px.png" />
+    <Content Include="Icons\trash_32px.png" />
+    <Content Include="Icons\undo_32px.png" />
+    <Content Include="Icons\user_32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

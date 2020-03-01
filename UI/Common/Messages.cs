@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI.Properties;
 
 namespace UI.Common
 {
@@ -65,22 +66,22 @@ namespace UI.Common
             switch (type)
             {
                 case enmType.Success:
-                    //this.picturebox1.Image = Resources.[typ Wiadomości]
-                    this.BackColor = Color.SeaGreen;
+                    this.pictureBox1.Image = Resources.succes_32px;
+                        this.BackColor = Color.SeaGreen;
                     break;
 
                 case enmType.Error:
-                    //this.picturebox1.Image = Resources.[typ Wiadomości]
+                    this.pictureBox1.Image = Resources.cancel_32px;
                     this.BackColor = Color.DarkRed;
                     break;
 
                 case enmType.Warning:
-                    //this.picturebox1.Image = Resources.[typ Wiadomości]
+                    this.pictureBox1.Image = Resources.warning_shield_32px;
                     this.BackColor = Color.DarkOrange;
                     break;
 
                 case enmType.Info:
-                    //this.picturebox1.Image = Resources.[typ Wiadomości]
+                    this.pictureBox1.Image = Resources.information_32px;
                     this.BackColor = Color.RoyalBlue;
                     break;
             }

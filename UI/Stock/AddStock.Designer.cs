@@ -48,9 +48,13 @@
             this.btnAddProductClear.BackColor = System.Drawing.Color.DimGray;
             this.btnAddProductClear.FlatAppearance.BorderSize = 0;
             this.btnAddProductClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddProductClear.Location = new System.Drawing.Point(372, 452);
+            this.btnAddProductClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnAddProductClear.ForeColor = System.Drawing.Color.White;
+            this.btnAddProductClear.Image = global::UI.Properties.Resources.undo_32px;
+            this.btnAddProductClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddProductClear.Location = new System.Drawing.Point(363, 428);
             this.btnAddProductClear.Name = "btnAddProductClear";
-            this.btnAddProductClear.Size = new System.Drawing.Size(167, 57);
+            this.btnAddProductClear.Size = new System.Drawing.Size(130, 57);
             this.btnAddProductClear.TabIndex = 1;
             this.btnAddProductClear.Text = "Clear";
             this.btnAddProductClear.UseVisualStyleBackColor = false;
@@ -58,14 +62,19 @@
             // 
             // btnAddArticle
             // 
-            this.btnAddArticle.BackColor = System.Drawing.Color.Green;
+            this.btnAddArticle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(181)))), ((int)(((byte)(60)))));
             this.btnAddArticle.FlatAppearance.BorderSize = 0;
             this.btnAddArticle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddArticle.Location = new System.Drawing.Point(564, 452);
+            this.btnAddArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnAddArticle.ForeColor = System.Drawing.Color.White;
+            this.btnAddArticle.Image = global::UI.Properties.Resources.submit_for_approval_32px;
+            this.btnAddArticle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddArticle.Location = new System.Drawing.Point(500, 428);
             this.btnAddArticle.Name = "btnAddArticle";
-            this.btnAddArticle.Size = new System.Drawing.Size(167, 57);
+            this.btnAddArticle.Size = new System.Drawing.Size(140, 57);
             this.btnAddArticle.TabIndex = 2;
             this.btnAddArticle.Text = "Add Article";
+            this.btnAddArticle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddArticle.UseVisualStyleBackColor = false;
             this.btnAddArticle.Click += new System.EventHandler(this.btnAddArticle_Click);
             // 
@@ -86,7 +95,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
             this.label2.ForeColor = System.Drawing.Color.Honeydew;
-            this.label2.Location = new System.Drawing.Point(309, 56);
+            this.label2.Location = new System.Drawing.Point(224, 57);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(185, 39);
@@ -122,7 +131,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Honeydew;
-            this.label5.Location = new System.Drawing.Point(44, 349);
+            this.label5.Location = new System.Drawing.Point(44, 345);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 25);
@@ -132,7 +141,7 @@
             // txtAddProductName
             // 
             this.txtAddProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtAddProductName.Location = new System.Drawing.Point(297, 142);
+            this.txtAddProductName.Location = new System.Drawing.Point(212, 143);
             this.txtAddProductName.Name = "txtAddProductName";
             this.txtAddProductName.Size = new System.Drawing.Size(200, 26);
             this.txtAddProductName.TabIndex = 27;
@@ -140,7 +149,7 @@
             // txtAddProductDescription
             // 
             this.txtAddProductDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtAddProductDescription.Location = new System.Drawing.Point(297, 203);
+            this.txtAddProductDescription.Location = new System.Drawing.Point(212, 204);
             this.txtAddProductDescription.Multiline = true;
             this.txtAddProductDescription.Name = "txtAddProductDescription";
             this.txtAddProductDescription.Size = new System.Drawing.Size(281, 61);
@@ -149,7 +158,7 @@
             // txtAddProductPrice
             // 
             this.txtAddProductPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtAddProductPrice.Location = new System.Drawing.Point(297, 276);
+            this.txtAddProductPrice.Location = new System.Drawing.Point(212, 277);
             this.txtAddProductPrice.Name = "txtAddProductPrice";
             this.txtAddProductPrice.Size = new System.Drawing.Size(200, 26);
             this.txtAddProductPrice.TabIndex = 29;
@@ -160,7 +169,7 @@
             this.cbAddProductCategory.DisplayMember = "CategoryName";
             this.cbAddProductCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cbAddProductCategory.FormattingEnabled = true;
-            this.cbAddProductCategory.Location = new System.Drawing.Point(297, 345);
+            this.cbAddProductCategory.Location = new System.Drawing.Point(212, 346);
             this.cbAddProductCategory.Name = "cbAddProductCategory";
             this.cbAddProductCategory.Size = new System.Drawing.Size(200, 28);
             this.cbAddProductCategory.TabIndex = 31;
@@ -168,14 +177,14 @@
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.Green;
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(181)))), ((int)(((byte)(60)))));
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(696, 12);
+            this.btnClose.Image = global::UI.Properties.Resources.close_window_32px;
+            this.btnClose.Location = new System.Drawing.Point(605, 12);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(35, 35);
             this.btnClose.TabIndex = 32;
-            this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
             // 
@@ -184,7 +193,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.Honeydew;
-            this.label6.Location = new System.Drawing.Point(521, 349);
+            this.label6.Location = new System.Drawing.Point(436, 350);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(207, 25);
@@ -196,7 +205,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.ClientSize = new System.Drawing.Size(743, 524);
+            this.ClientSize = new System.Drawing.Size(652, 497);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.cbAddProductCategory);
