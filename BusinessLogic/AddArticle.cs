@@ -33,9 +33,27 @@ namespace BusinessLogic
                 model.Price = this.Price;
                 model.ArticleCategory = this.ArticleCategory;
 
+                AddNewCategory();
+
                 db.Articles.Add(model);
                 db.SaveChanges();
             }
+        }
+        public void AddNewCategory()
+        {
+            using (DbModel db = new DbModel())
+            {
+                tblCategory model = new tblCategory();
+
+                if (!db.Categories.Any(x => x.CategoryName.Equals(this.ArticleCategory)))
+                {
+                    model.CategoryName = this.ArticleCategory;
+
+                    db.Categories.Add(model);
+                    db.SaveChanges();
+                }
+            }
+
         }
 
     }

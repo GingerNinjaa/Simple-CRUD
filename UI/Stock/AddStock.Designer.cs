@@ -40,6 +40,7 @@
             this.txtAddProductPrice = new System.Windows.Forms.TextBox();
             this.cbAddProductCategory = new System.Windows.Forms.ComboBox();
             this.btnClose = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAddProductClear
@@ -47,7 +48,7 @@
             this.btnAddProductClear.BackColor = System.Drawing.Color.DimGray;
             this.btnAddProductClear.FlatAppearance.BorderSize = 0;
             this.btnAddProductClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddProductClear.Location = new System.Drawing.Point(424, 497);
+            this.btnAddProductClear.Location = new System.Drawing.Point(372, 452);
             this.btnAddProductClear.Name = "btnAddProductClear";
             this.btnAddProductClear.Size = new System.Drawing.Size(167, 57);
             this.btnAddProductClear.TabIndex = 1;
@@ -60,7 +61,7 @@
             this.btnAddArticle.BackColor = System.Drawing.Color.Green;
             this.btnAddArticle.FlatAppearance.BorderSize = 0;
             this.btnAddArticle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddArticle.Location = new System.Drawing.Point(666, 497);
+            this.btnAddArticle.Location = new System.Drawing.Point(564, 452);
             this.btnAddArticle.Name = "btnAddArticle";
             this.btnAddArticle.Size = new System.Drawing.Size(167, 57);
             this.btnAddArticle.TabIndex = 2;
@@ -71,7 +72,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Honeydew;
             this.label3.Location = new System.Drawing.Point(44, 137);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -83,43 +84,43 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 26.25F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
             this.label2.ForeColor = System.Drawing.Color.Honeydew;
             this.label2.Location = new System.Drawing.Point(309, 56);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(208, 42);
+            this.label2.Size = new System.Drawing.Size(185, 39);
             this.label2.TabIndex = 14;
             this.label2.Text = "Add Article";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Honeydew;
             this.label1.Location = new System.Drawing.Point(44, 203);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 25);
+            this.label1.Size = new System.Drawing.Size(131, 25);
             this.label1.TabIndex = 15;
             this.label1.Text = "Description";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Honeydew;
             this.label4.Location = new System.Drawing.Point(44, 270);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 25);
+            this.label4.Size = new System.Drawing.Size(66, 25);
             this.label4.TabIndex = 16;
             this.label4.Text = "Price";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Honeydew;
             this.label5.Location = new System.Drawing.Point(44, 349);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -130,15 +131,15 @@
             // 
             // txtAddProductName
             // 
-            this.txtAddProductName.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtAddProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtAddProductName.Location = new System.Drawing.Point(297, 142);
             this.txtAddProductName.Name = "txtAddProductName";
-            this.txtAddProductName.Size = new System.Drawing.Size(200, 27);
+            this.txtAddProductName.Size = new System.Drawing.Size(200, 26);
             this.txtAddProductName.TabIndex = 27;
             // 
             // txtAddProductDescription
             // 
-            this.txtAddProductDescription.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtAddProductDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtAddProductDescription.Location = new System.Drawing.Point(297, 203);
             this.txtAddProductDescription.Multiline = true;
             this.txtAddProductDescription.Name = "txtAddProductDescription";
@@ -147,20 +148,21 @@
             // 
             // txtAddProductPrice
             // 
-            this.txtAddProductPrice.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtAddProductPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtAddProductPrice.Location = new System.Drawing.Point(297, 276);
             this.txtAddProductPrice.Name = "txtAddProductPrice";
-            this.txtAddProductPrice.Size = new System.Drawing.Size(200, 27);
+            this.txtAddProductPrice.Size = new System.Drawing.Size(200, 26);
             this.txtAddProductPrice.TabIndex = 29;
             this.txtAddProductPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddProductPrice_KeyPress);
             // 
             // cbAddProductCategory
             // 
-            this.cbAddProductCategory.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.cbAddProductCategory.DisplayMember = "CategoryName";
+            this.cbAddProductCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cbAddProductCategory.FormattingEnabled = true;
             this.cbAddProductCategory.Location = new System.Drawing.Point(297, 345);
             this.cbAddProductCategory.Name = "cbAddProductCategory";
-            this.cbAddProductCategory.Size = new System.Drawing.Size(200, 29);
+            this.cbAddProductCategory.Size = new System.Drawing.Size(200, 28);
             this.cbAddProductCategory.TabIndex = 31;
             this.cbAddProductCategory.ValueMember = "CategoryName";
             // 
@@ -169,7 +171,7 @@
             this.btnClose.BackColor = System.Drawing.Color.Green;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(798, 12);
+            this.btnClose.Location = new System.Drawing.Point(696, 12);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(35, 35);
             this.btnClose.TabIndex = 32;
@@ -177,12 +179,25 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Honeydew;
+            this.label6.Location = new System.Drawing.Point(521, 349);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(207, 25);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Select or type new";
+            // 
             // AddStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.ClientSize = new System.Drawing.Size(845, 566);
+            this.ClientSize = new System.Drawing.Size(743, 524);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.cbAddProductCategory);
             this.Controls.Add(this.txtAddProductPrice);
@@ -221,5 +236,6 @@
  //       private CompanyDBDataSet_Category companyDBDataSet_Category;
  //       private CompanyDBDataSet_CategoryTableAdapters.tblCategoryTableAdapter tblCategoryTableAdapter;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label6;
     }
 }

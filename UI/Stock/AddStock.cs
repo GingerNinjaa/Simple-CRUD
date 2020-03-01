@@ -21,6 +21,8 @@ namespace UI.Stock
         {
             InitializeComponent();
         }
+
+        #region
         //Turbo ważne do przesuwanie okienka PART 2
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -33,6 +35,8 @@ namespace UI.Stock
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        #endregion
 
         private void Alert(string msg, Messages.enmType type)
         {
@@ -77,7 +81,7 @@ namespace UI.Stock
             {
                 AddNewArticle();
                 ClearBoard();
-
+                FillComboBox();
                 this.Alert("Article added", Messages.enmType.Success);  //Messages.Messages.enmType.Success
             }
             catch (Exception ex)
@@ -85,7 +89,7 @@ namespace UI.Stock
                 this.Alert(ex.Message, Messages.enmType.Error);
             }
 
-            
+           
             //System.Data.Entity.Validation.DbEntityValidationException
         }
 
@@ -118,5 +122,7 @@ namespace UI.Stock
                 cbAddProductCategory.DisplayMember = "CategoryName";
             }
         }
+
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,15 +16,37 @@ namespace UI.Administration
         public AllEmployee()
         {
             InitializeComponent();
+            FillDataGrid();
         }
 
         private void AllEmployee_Load(object sender, EventArgs e)
         {
+            FillDataGrid();
         }
-
-        private void timer1_Tick(object sender, EventArgs e)
+       
+        private void FillDataGrid()
         {
+            using (DbModel db = new DbModel())
+            {
+                dataGridView1.DataSource = db.Users.ToList();
 
+                //this.dataGridView1.Columns[0].Visible = false;
+
+                this.dataGridView1.Columns[0].Visible = false;
+                this.dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                this.dataGridView1.Columns[2].Visible = false;
+                this.dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                this.dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                this.dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                this.dataGridView1.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
         }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            FillDataGrid();
+        }
+
+
     }
 }

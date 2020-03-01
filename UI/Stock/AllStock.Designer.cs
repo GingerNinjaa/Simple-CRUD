@@ -29,14 +29,16 @@ namespace UI.Stock
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.btnGoBack = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.AllStockDataGridView = new System.Windows.Forms.DataGridView();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AllStockDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,7 +57,7 @@ namespace UI.Stock
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 47);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Dodaj kategorie";
+            this.button1.Text = "Usuń kategorie";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -69,18 +71,18 @@ namespace UI.Stock
             this.btnGoBack.UseVisualStyleBackColor = true;
             this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
             // 
-            // dataGridView1
+            // AllStockDataGridView
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.AllStockDataGridView.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(210)))), ((int)(((byte)(245)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AllStockDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.AllStockDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(210)))), ((int)(((byte)(245)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -88,21 +90,27 @@ namespace UI.Stock
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 50);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1084, 711);
-            this.dataGridView1.TabIndex = 2;
+            this.AllStockDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.AllStockDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AllStockDataGridView.GridColor = System.Drawing.Color.Black;
+            this.AllStockDataGridView.Location = new System.Drawing.Point(0, 50);
+            this.AllStockDataGridView.Name = "AllStockDataGridView";
+            this.AllStockDataGridView.ReadOnly = true;
+            this.AllStockDataGridView.Size = new System.Drawing.Size(1084, 711);
+            this.AllStockDataGridView.TabIndex = 2;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // AllStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 761);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.AllStockDataGridView);
             this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -110,7 +118,7 @@ namespace UI.Stock
             this.Text = "AllStock";
             this.Load += new System.EventHandler(this.AllStock_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AllStockDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -119,7 +127,7 @@ namespace UI.Stock
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnGoBack;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView AllStockDataGridView;
  //       private CompanyDBDataSet_Products companyDBDataSet_Products;
  //       private CompanyDBDataSet_ProductsTableAdapters.tblProductsTableAdapter tblProductsTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
@@ -134,6 +142,7 @@ namespace UI.Stock
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer timer1;
         /*
 private System.Windows.Forms.DataGridView dataGridView1;
 private CompanyDBDataSet1 companyDBDataSet1;

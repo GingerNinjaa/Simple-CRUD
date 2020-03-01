@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using UI.Common;
+using BusinessLogic;
+using Data;
 
 namespace UI.Stock
 {
@@ -17,8 +19,10 @@ namespace UI.Stock
         public AddCategory()
         {
             InitializeComponent();
+            FillComboBox();
         }
 
+        #region
         //Turbo ważne do przesuwanie okienka PART 2
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -31,7 +35,7 @@ namespace UI.Stock
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
+        #endregion
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Visible = false;
@@ -45,25 +49,35 @@ namespace UI.Stock
 
         private void btnAddArticle_Click(object sender, EventArgs e)
         {
-            /*
-            tblProductCategory model = new tblProductCategory();
-
             try
             {
-                using (DB db = new DB())
-                {
-                    model.CategoryName = txtAddCategory.Text;
-                    db.Category.Add(model);
-                    db.SaveChanges();
-                }
+                delete();
                 this.Alert("Category added", Messages.enmType.Success);
             }
-            catch (System.Data.Entity.Validation.DbEntityValidationException)
+            catch (Exception ex)  //System.Data.Entity.Validation.DbEntityValidationException
             {
-                this.Alert("Error", Messages.enmType.Error);
-                
+                this.Alert(ex.Message, Messages.enmType.Error);  
             }
-            */
+            FillComboBox();
         }
+
+        private void delete()
+        {
+            DeleteCategory del = new DeleteCategory(cbDeleteCategory.Text);
+            del.Delete();
+        }
+
+        private void FillComboBox()
+        {
+            using (DbModel db = new DbModel())
+            {
+                cbDeleteCategory.DataSource = db.Categories.ToList();
+                cbDeleteCategory.ValueMember = "CategoryId";
+                cbDeleteCategory.DisplayMember = "CategoryName";
+               
+               
+            }
+        }
+
     }
 }
