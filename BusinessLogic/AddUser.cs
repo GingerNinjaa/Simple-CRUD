@@ -39,6 +39,7 @@ namespace BusinessLogic
 
             using (DbModel db = new DbModel())
             {
+        
                 if (db.Users.Any(x => x.UserName.Equals(this.UserName)))
                 {
                     isValid = false;
@@ -92,7 +93,9 @@ namespace BusinessLogic
 
             using (DbModel db = new DbModel())
             {
-                if (db.Users.Any(x => x.UserName.Equals(this.UserName)))
+                //(db.Users.Any(x => x.UserName.Equals(this.UserName)))
+                //(db.Users.Any((x => x.UserName == UserName && x.UserId != this.id))
+                if(db.Users.Any((x => x.UserName == UserName && x.UserId != this.id)))
                 {
                     isValid = false;
                     throw new Exception("User name taken");
@@ -142,10 +145,11 @@ namespace BusinessLogic
             {
                 //   this.id = db.Users.Where(x => x.UserName == this.UserName).Select(x => x.UserId).FirstOrDefault();
                 
-                valid = db.Users.Any(x => x.UserName == this.UserName);
+                //valid = db.Users.Any(x => x.UserName == this.UserName);
+                valid = db.Users.Any((x => x.UserName == UserName && x.UserId != this.id));
             }
 
-            if (valid == true)
+            if (valid != true)
             {
                 AddNewUser();
             }

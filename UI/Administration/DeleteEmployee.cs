@@ -1,4 +1,5 @@
-﻿using Data;
+﻿using BusinessLogic;
+using Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,11 +16,13 @@ namespace UI.Administration
 {
     public partial class DeleteEmployee : Form
     {
+        
         public DeleteEmployee()
         {
             InitializeComponent();
             FillComboBox();
         }
+        public int DeletedUserId { get; set; }
 
         #region
         //Turbo ważne do przesuwanie okienka PART 2
@@ -44,7 +47,7 @@ namespace UI.Administration
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Visible = false;
         }
 
         private void FillComboBox()
@@ -65,6 +68,7 @@ namespace UI.Administration
 
             try
             {
+                Delete();
                 this.Alert("Succes", Messages.enmType.Success);
             }
             catch (Exception ex)
@@ -72,13 +76,44 @@ namespace UI.Administration
 
                 this.Alert(ex.Message, Messages.enmType.Error);
             }
+
+              FillComboBox();
+        }
+        private void Delete()
+        {
+
+            DeleteUser del = new DeleteUser(this.DeletedUserId);
+
+            del.Delete();
         }
         private void FillTextBox()
         {
-            //txtDeleteUserFirstName.Text =
-            //txtDeleteUserLastName.Text =
+            using (DbModel db = new DbModel())
+            {
+
+                txtDeleteUserFirstName.Text = db.Users.ToList().Find(x => x.UserName == cbDeleteUser.Text).FirstName;
+
+                txtDeleteUserLastName.Text = db.Users.ToList().Find(x => x.UserName == cbDeleteUser.Text).LastName;
+
+                this.DeletedUserId = db.Users.ToList().Find(x => x.UserName == cbDeleteUser.Text).UserId;
+
+                
+            }
         }
 
+        private void cbDeleteUser_TextChanged(object sender, EventArgs e)
+        {
+            FillTextBox();
+        }
 
+        private void cbDeleteUser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillTextBox();
+        }
+
+        private void cbDeleteUser_Click(object sender, EventArgs e)
+        {
+            FillComboBox();
+        }
     }
 }

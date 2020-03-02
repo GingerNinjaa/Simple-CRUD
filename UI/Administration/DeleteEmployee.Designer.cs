@@ -144,6 +144,9 @@
             this.cbDeleteUser.Name = "cbDeleteUser";
             this.cbDeleteUser.Size = new System.Drawing.Size(200, 28);
             this.cbDeleteUser.TabIndex = 34;
+            this.cbDeleteUser.SelectedIndexChanged += new System.EventHandler(this.cbDeleteUser_SelectedIndexChanged);
+            this.cbDeleteUser.TextChanged += new System.EventHandler(this.cbDeleteUser_TextChanged);
+            this.cbDeleteUser.Click += new System.EventHandler(this.cbDeleteUser_Click);
             // 
             // DeleteEmployee
             // 
