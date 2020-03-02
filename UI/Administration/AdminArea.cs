@@ -20,6 +20,7 @@ namespace UI.Administration
 
         AddEmployee addEmployee = new AddEmployee();
         DeleteEmployee deleteEmployee = new DeleteEmployee();
+        ChangePassword changePassword = new ChangePassword();
 
         private Form activeForm = null;
         private void openChildForm(Form childForm)
@@ -52,7 +53,7 @@ namespace UI.Administration
 
         private void btnAdminChangePassword_Click(object sender, EventArgs e)
         {
-           // ChangePassword changePassword = new ChangePassword();
+            changePassword.Visible = !changePassword.Visible;
           //  changePassword.Show();
         }
 
