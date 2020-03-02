@@ -14,7 +14,8 @@ using Data;
 namespace UI.Administration
 {
     public partial class AddEmployee : Form
-    {    
+    {
+        public int UserId { get; set; }
         public AddEmployee()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace UI.Administration
             }
         }
 
+        #region
         //Turbo ważne do przesuwanie okienka PART 2
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -41,7 +43,7 @@ namespace UI.Administration
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
+        #endregion
         private void Alert(string msg, Messages.enmType type)
         {
             Messages popup = new Messages();
@@ -61,7 +63,7 @@ namespace UI.Administration
             try
             {
                 AddNew();
-                this.Alert("User Added", Messages.enmType.Success);
+                this.Alert("Succes", Messages.enmType.Success);
                 ClearBoard();
             }
             catch (Exception ex)
@@ -72,11 +74,12 @@ namespace UI.Administration
 
         private void AddNew()
         {
+
             BusinessLogic.AddUser add = new BusinessLogic.AddUser
-                                       (txtAdminAddFirstName.Text, txtAdminAddPassword.Text,txtAdminAddPasswordConfirm.Text, txtAdminAddFirstName.Text,
+                                       (this.UserId,txtAdminAddFirstName.Text, txtAdminAddPassword.Text,txtAdminAddPasswordConfirm.Text, txtAdminAddFirstName.Text,
                                        txtAdminAddLastName.Text, cbAdminPickPosition.Text, txtAdminAddEmail.Text);
 
-            add.AddNewUser();
+            add.Add_or_Edit();
         }
 
         private void ClearBoard()

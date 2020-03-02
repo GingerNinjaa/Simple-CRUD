@@ -19,6 +19,8 @@ namespace UI.Administration
             FillDataGrid();
         }
 
+        AddEmployee addEmployee = new AddEmployee();
+
         private void AllEmployee_Load(object sender, EventArgs e)
         {
             FillDataGrid();
@@ -47,6 +49,24 @@ namespace UI.Administration
             FillDataGrid();
         }
 
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            addEmployee.Visible = !addEmployee.Visible;
 
+            int id = Convert.ToInt32(this.dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+
+            using (DbModel db = new DbModel())
+            {
+                tblUser model = new tblUser();
+
+                model = db.Users.Where(x => x.UserId == id).FirstOrDefault();
+                addEmployee.UserId = model.UserId;
+                addEmployee.txtAdminAddFirstName.Text = model.FirstName;
+                addEmployee.txtAdminAddLastName.Text = model.LastName;
+                addEmployee.txtAdminAddUserName.Text = model.UserName;
+                addEmployee.txtAdminAddEmail.Text = model.Email;
+     
+            }
+        }
     }
 }

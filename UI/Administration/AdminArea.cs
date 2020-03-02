@@ -19,6 +19,7 @@ namespace UI.Administration
         }
 
         AddEmployee addEmployee = new AddEmployee();
+        DeleteEmployee deleteEmployee = new DeleteEmployee();
 
         private Form activeForm = null;
         private void openChildForm(Form childForm)
@@ -62,6 +63,11 @@ namespace UI.Administration
             addEmployee.Visible = !addEmployee.Visible;
             
             //addEmployee.Show();
+        }
+
+        private void btnDeleteEmployee_Click(object sender, EventArgs e)
+        {
+            deleteEmployee.Visible = !deleteEmployee.Visible;
         }
     }
 }

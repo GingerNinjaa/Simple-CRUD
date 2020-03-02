@@ -263,13 +263,13 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cbAdminPickPosition;
   //      private CompanyDBDataSet_ALL companyDBDataSet_ALL;
-        private System.Windows.Forms.TextBox txtAdminAddPasswordConfirm;
-        private System.Windows.Forms.TextBox txtAdminAddPassword;
-        private System.Windows.Forms.TextBox txtAdminAddUserName;
-        private System.Windows.Forms.TextBox txtAdminAddEmail;
-        private System.Windows.Forms.TextBox txtAdminAddLastName;
-        private System.Windows.Forms.TextBox txtAdminAddFirstName;
-        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox txtAdminAddPasswordConfirm;
+        public System.Windows.Forms.TextBox txtAdminAddPassword;
+        public System.Windows.Forms.TextBox txtAdminAddUserName;
+        public System.Windows.Forms.TextBox txtAdminAddEmail;
+        public System.Windows.Forms.TextBox txtAdminAddLastName;
+        public System.Windows.Forms.TextBox txtAdminAddFirstName;
+        public System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnClose;
     }
 }

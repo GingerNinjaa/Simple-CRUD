@@ -30,11 +30,11 @@
         {
             this.btnGoBack = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDeleteEmployee = new System.Windows.Forms.Button();
             this.btnAdminAllEmployee = new System.Windows.Forms.Button();
             this.btnAdminChangePassword = new System.Windows.Forms.Button();
             this.btnAdminAddEmployee = new System.Windows.Forms.Button();
             this.panelChildFormAdmin = new System.Windows.Forms.Panel();
-            this.btnDeleteEmployee = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +63,16 @@
             this.panel1.Size = new System.Drawing.Size(1084, 35);
             this.panel1.TabIndex = 2;
             // 
+            // btnDeleteEmployee
+            // 
+            this.btnDeleteEmployee.Location = new System.Drawing.Point(392, 12);
+            this.btnDeleteEmployee.Name = "btnDeleteEmployee";
+            this.btnDeleteEmployee.Size = new System.Drawing.Size(139, 23);
+            this.btnDeleteEmployee.TabIndex = 7;
+            this.btnDeleteEmployee.Text = "Delete Employee";
+            this.btnDeleteEmployee.UseVisualStyleBackColor = true;
+            this.btnDeleteEmployee.Click += new System.EventHandler(this.btnDeleteEmployee_Click);
+            // 
             // btnAdminAllEmployee
             // 
             this.btnAdminAllEmployee.Location = new System.Drawing.Point(140, 12);
@@ -75,7 +85,7 @@
             // 
             // btnAdminChangePassword
             // 
-            this.btnAdminChangePassword.Location = new System.Drawing.Point(537, 12);
+            this.btnAdminChangePassword.Location = new System.Drawing.Point(608, 9);
             this.btnAdminChangePassword.Name = "btnAdminChangePassword";
             this.btnAdminChangePassword.Size = new System.Drawing.Size(75, 23);
             this.btnAdminChangePassword.TabIndex = 5;
@@ -101,15 +111,6 @@
             this.panelChildFormAdmin.Name = "panelChildFormAdmin";
             this.panelChildFormAdmin.Size = new System.Drawing.Size(1084, 726);
             this.panelChildFormAdmin.TabIndex = 7;
-            // 
-            // btnDeleteEmployee
-            // 
-            this.btnDeleteEmployee.Location = new System.Drawing.Point(392, 12);
-            this.btnDeleteEmployee.Name = "btnDeleteEmployee";
-            this.btnDeleteEmployee.Size = new System.Drawing.Size(139, 23);
-            this.btnDeleteEmployee.TabIndex = 7;
-            this.btnDeleteEmployee.Text = "Delete Employee";
-            this.btnDeleteEmployee.UseVisualStyleBackColor = true;
             // 
             // AdminArea
             // 

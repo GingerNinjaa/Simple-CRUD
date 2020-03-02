@@ -82,6 +82,12 @@
     <Compile Include="Administration\AllEmployee.Designer.cs">
       <DependentUpon>AllEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administration\DeleteEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\DeleteEmployee.Designer.cs">
+      <DependentUpon>DeleteEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Common\ResetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\AllEmployee.resx">
       <DependentUpon>AllEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\DeleteEmployee.resx">
+      <DependentUpon>DeleteEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\ResetPassword.resx">
       <DependentUpon>ResetPassword.cs</DependentUpon>
