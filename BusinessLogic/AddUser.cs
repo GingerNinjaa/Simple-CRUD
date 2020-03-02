@@ -77,8 +77,6 @@ namespace BusinessLogic
                         }
                     }
 
-
-
                     db.Users.Add(model);
                     db.SaveChanges();
                 }

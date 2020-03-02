@@ -50,10 +50,11 @@
             // 
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::UI.Properties.Resources.close_window_32px;
-            this.button1.Location = new System.Drawing.Point(272, 12);
+            this.button1.Location = new System.Drawing.Point(263, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(20, 20);
+            this.button1.Size = new System.Drawing.Size(29, 22);
             this.button1.TabIndex = 3;
             this.button1.UseVisualStyleBackColor = true;
             // 

@@ -73,6 +73,16 @@ namespace UI.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_user_26px {
+            get {
+                object obj = ResourceManager.GetObject("add_user_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap admin_settings_male_32px {
             get {
                 object obj = ResourceManager.GetObject("admin_settings_male_32px", resourceCulture);
@@ -163,9 +173,39 @@ namespace UI.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lock_26px {
+            get {
+                object obj = ResourceManager.GetObject("lock_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logout_rounded_down_32px {
             get {
                 object obj = ResourceManager.GetObject("logout_rounded_down_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap refresh_30px {
+            get {
+                object obj = ResourceManager.GetObject("refresh_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap refresh_50px {
+            get {
+                object obj = ResourceManager.GetObject("refresh_50px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

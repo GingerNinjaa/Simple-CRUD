@@ -216,12 +216,16 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Icons\add_item_32px.png" />
+    <None Include="Icons\add_user_26px.png" />
     <Content Include="Icons\admin_settings_male_32px.png" />
     <Content Include="Icons\box_32px.png" />
     <Content Include="Icons\cancel_32px.png" />
     <Content Include="Icons\close_window_32px.png" />
     <Content Include="Icons\depot_32px.png" />
     <Content Include="Icons\information_32px.png" />
+    <None Include="Icons\refresh_50px.png" />
+    <None Include="Icons\refresh_30px.png" />
+    <None Include="Icons\lock_26px.png" />
     <Content Include="Icons\succes_32px.png" />
     <Content Include="Icons\warning_shield_32px.png" />
     <None Include="Icons\edit_property_32px.png" />
