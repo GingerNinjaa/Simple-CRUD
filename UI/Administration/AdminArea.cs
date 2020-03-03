@@ -53,17 +53,12 @@ namespace UI.Administration
 
         private void btnAdminChangePassword_Click(object sender, EventArgs e)
         {
-            changePassword.Visible = !changePassword.Visible;
-          //  changePassword.Show();
+            changePassword.Visible = !changePassword.Visible;   
         }
 
         private void btnAdminAddEmployee_Click(object sender, EventArgs e)
         {
-
-
-            addEmployee.Visible = !addEmployee.Visible;
-            
-            //addEmployee.Show();
+            addEmployee.Visible = !addEmployee.Visible;     
         }
 
         private void btnDeleteEmployee_Click(object sender, EventArgs e)

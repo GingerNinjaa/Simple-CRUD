@@ -21,12 +21,8 @@ namespace UI.Common
         {
             InitializeComponent();
             customizeDesing();
-/*
-            if (CurentUser.Role.Trim() != "Admin") 
-            {
-                btnAdministration.Enabled = false;
-            }
-            */
+            FadeIN();
+
         }
 
         private void Alert(string msg, Messages.enmType type)
@@ -126,7 +122,7 @@ namespace UI.Common
             panelChildForm.Controls.Add(childForm);
             panelChildForm.Tag = childForm;
             childForm.BringToFront();
-            childForm.Show();      
+            childForm.Show();          
         }
 
         private void btnUser_Click(object sender, EventArgs e)
@@ -169,6 +165,23 @@ namespace UI.Common
             Application.Exit();
         }
 
-      
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.Opacity += 0.05;
+        }
+        private void FadeIN()
+        {
+            timer1.Start();
+
+            if (this.Opacity == 100)
+            {
+                timer1.Stop();
+            }
+        }
+
+        private void MainBoard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

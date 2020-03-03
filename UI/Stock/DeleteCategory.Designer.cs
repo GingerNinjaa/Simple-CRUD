@@ -1,6 +1,6 @@
 ﻿namespace UI.Stock
 {
-    partial class AddCategory
+    partial class DeleteCategory
     {
         /// <summary>
         /// Required designer variable.

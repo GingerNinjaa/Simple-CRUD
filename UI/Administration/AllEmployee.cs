@@ -26,7 +26,7 @@ namespace UI.Administration
             FillDataGrid();
         }
        
-        private void FillDataGrid()
+        public void FillDataGrid()
         {
             using (DbModel db = new DbModel())
             {

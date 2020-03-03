@@ -32,7 +32,7 @@ namespace UI.Stock
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AddCategory addCategory = new AddCategory();
+            DeleteCategory addCategory = new DeleteCategory();
             addCategory.Show();
             FillDataGrid();
         }

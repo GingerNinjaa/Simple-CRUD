@@ -153,11 +153,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Stock\AddCategory.cs">
+    <Compile Include="Stock\DeleteCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Stock\AddCategory.Designer.cs">
-      <DependentUpon>AddCategory.cs</DependentUpon>
+    <Compile Include="Stock\DeleteCategory.Designer.cs">
+      <DependentUpon>DeleteCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="Stock\AddStock.cs">
       <SubType>Form</SubType>
@@ -217,8 +217,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Stock\AddCategory.resx">
-      <DependentUpon>AddCategory.cs</DependentUpon>
+    <EmbeddedResource Include="Stock\DeleteCategory.resx">
+      <DependentUpon>DeleteCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stock\AddStock.resx">
       <DependentUpon>AddStock.cs</DependentUpon>

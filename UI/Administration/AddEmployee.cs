@@ -65,6 +65,10 @@ namespace UI.Administration
                 AddNew();
                 this.Alert("Succes", Messages.enmType.Success);
                 ClearBoard();
+
+                AllEmployee mtp = new AllEmployee();
+                mtp.FillDataGrid();
+
             }
             catch (Exception ex)
             {
@@ -76,7 +80,7 @@ namespace UI.Administration
         {
 
             BusinessLogic.AddUser add = new BusinessLogic.AddUser
-                                       (this.UserId,txtAdminAddFirstName.Text, txtAdminAddPassword.Text,txtAdminAddPasswordConfirm.Text, txtAdminAddFirstName.Text,
+                                       (this.UserId,txtAdminAddUserName.Text, txtAdminAddPassword.Text,txtAdminAddPasswordConfirm.Text, txtAdminAddFirstName.Text,
                                        txtAdminAddLastName.Text, cbAdminPickPosition.Text, txtAdminAddEmail.Text);
 
             add.Add_or_Edit();

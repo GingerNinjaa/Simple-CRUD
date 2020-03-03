@@ -14,9 +14,9 @@ using Data;
 
 namespace UI.Stock
 {
-    public partial class AddCategory : Form
+    public partial class DeleteCategory : Form
     {
-        public AddCategory()
+        public DeleteCategory()
         {
             InitializeComponent();
             FillComboBox();
@@ -63,7 +63,7 @@ namespace UI.Stock
 
         private void delete()
         {
-            DeleteCategory del = new DeleteCategory(cbDeleteCategory.Text);
+            BusinessLogic.DeleteCategory del = new BusinessLogic.DeleteCategory(cbDeleteCategory.Text);
             del.Delete();
         }
 
