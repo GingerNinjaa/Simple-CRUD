@@ -219,6 +219,7 @@
             // 
             this.btnAdministration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnAdministration.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAdministration.Enabled = false;
             this.btnAdministration.FlatAppearance.BorderSize = 0;
             this.btnAdministration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdministration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -294,6 +295,7 @@
             this.Opacity = 0D;
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainBoard_FormClosed);
+            this.Load += new System.EventHandler(this.MainBoard_Load);
             this.panelSideMenu.ResumeLayout(false);
             this.panelPlaylistSubmenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);

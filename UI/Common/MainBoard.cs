@@ -23,6 +23,7 @@ namespace UI.Common
             customizeDesing();
             FadeIN();
 
+ 
         }
 
         private void Alert(string msg, Messages.enmType type)
@@ -77,7 +78,13 @@ namespace UI.Common
                 subMenu.Visible = false;
             }
         }
-
+        private void IsAdmin()
+        {
+            if (ActiveUser.c_Position == "admin")
+            {
+                this.btnAdministration.Enabled = true;
+            }
+        }
         private void btnStock_Click(object sender, EventArgs e)
         {
             showSubMenu(panelPlaylistSubmenu);
@@ -182,6 +189,11 @@ namespace UI.Common
         private void MainBoard_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void MainBoard_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
