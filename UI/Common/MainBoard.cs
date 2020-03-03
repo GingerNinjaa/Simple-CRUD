@@ -22,8 +22,9 @@ namespace UI.Common
             InitializeComponent();
             customizeDesing();
             FadeIN();
+            IsAdmin();
 
- 
+
         }
 
         private void Alert(string msg, Messages.enmType type)
