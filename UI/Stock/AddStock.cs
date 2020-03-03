@@ -82,7 +82,7 @@ namespace UI.Stock
                 AddNewArticle();
                 ClearBoard();
                 FillComboBox();
-                this.Alert("Article added", Messages.enmType.Success);  //Messages.Messages.enmType.Success
+                this.Alert("Success", Messages.enmType.Success);  //Messages.Messages.enmType.Success
             }
             catch (Exception ex)
             {
@@ -97,7 +97,7 @@ namespace UI.Stock
         {
             AddArticle add = new AddArticle(txtAddProductName.Text,txtAddProductDescription.Text,decimal.Parse(txtAddProductPrice.Text),cbAddProductCategory.Text);
 
-            add.NewArticle();
+            add.Add_or_edit();
         }
         private void ClearBoard()
         {

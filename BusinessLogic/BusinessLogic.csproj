@@ -57,6 +57,7 @@
     <Compile Include="AddUser.cs" />
     <Compile Include="AdminEditUser.cs" />
     <Compile Include="ChangePass.cs" />
+    <Compile Include="DelArticle.cs" />
     <Compile Include="DeleteCategory.cs" />
     <Compile Include="DeleteUser.cs" />
     <Compile Include="EditUserData.cs" />

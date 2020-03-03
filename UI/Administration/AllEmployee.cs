@@ -65,6 +65,7 @@ namespace UI.Administration
                 addEmployee.txtAdminAddLastName.Text = model.LastName;
                 addEmployee.txtAdminAddUserName.Text = model.UserName;
                 addEmployee.txtAdminAddEmail.Text = model.Email;
+                
      
             }
         }

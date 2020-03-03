@@ -37,6 +37,7 @@ namespace UI.Stock
             this.AllStockDataGridView = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnGoBack = new System.Windows.Forms.Button();
+            this.btnDeleteArticle = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AllStockDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -44,6 +45,7 @@ namespace UI.Stock
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panel1.Controls.Add(this.btnDeleteArticle);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -94,6 +96,7 @@ namespace UI.Stock
             this.AllStockDataGridView.ReadOnly = true;
             this.AllStockDataGridView.Size = new System.Drawing.Size(1084, 711);
             this.AllStockDataGridView.TabIndex = 2;
+            this.AllStockDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AllStockDataGridView_CellDoubleClick);
             // 
             // timer1
             // 
@@ -117,6 +120,22 @@ namespace UI.Stock
             this.btnGoBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGoBack.UseVisualStyleBackColor = false;
             this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
+            // 
+            // btnDeleteArticle
+            // 
+            this.btnDeleteArticle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnDeleteArticle.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteArticle.Image = global::UI.Properties.Resources.trash_32px;
+            this.btnDeleteArticle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteArticle.Location = new System.Drawing.Point(345, 4);
+            this.btnDeleteArticle.Name = "btnDeleteArticle";
+            this.btnDeleteArticle.Size = new System.Drawing.Size(180, 44);
+            this.btnDeleteArticle.TabIndex = 3;
+            this.btnDeleteArticle.Text = "Delete Article";
+            this.btnDeleteArticle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDeleteArticle.UseVisualStyleBackColor = true;
+            this.btnDeleteArticle.Click += new System.EventHandler(this.btnDeleteArticle_Click);
             // 
             // AllStock
             // 
@@ -156,6 +175,7 @@ namespace UI.Stock
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnDeleteArticle;
         /*
 private System.Windows.Forms.DataGridView dataGridView1;
 private CompanyDBDataSet1 companyDBDataSet1;

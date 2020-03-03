@@ -18,7 +18,8 @@ namespace UI.Stock
             InitializeComponent();
             FillDataGrid();
         }
-
+        AddStock addStock = new AddStock();
+        DeleteArticle deleteArticle = new DeleteArticle();
         private void btnGoBack_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -53,6 +54,31 @@ namespace UI.Stock
         {
                  
             FillDataGrid();
+        }
+
+        private void AllStockDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            addStock.Visible = !addStock.Visible;
+
+            int id = Convert.ToInt32(this.AllStockDataGridView.SelectedRows[0].Cells[0].Value.ToString());
+
+            using (DbModel db = new DbModel())
+            {
+                tblArticle model = new tblArticle();
+
+                model = db.Articles.Where(x => x.ArticleId == id).FirstOrDefault();
+
+                addStock.txtAddProductName.Text = model.ArticleName;
+                addStock.txtAddProductDescription.Text = model.ArticleDescription;
+                addStock.txtAddProductPrice.Text = model.Price.ToString();
+                addStock.cbAddProductCategory.Text = model.ArticleCategory;
+
+            }
+        }
+
+        private void btnDeleteArticle_Click(object sender, EventArgs e)
+        {
+            deleteArticle.Visible = !deleteArticle.Visible;
         }
     }
 }

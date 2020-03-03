@@ -18,7 +18,7 @@ namespace BusinessLogic
         public string LastName { get; set; }
         public string Position { get; set; }
         public string Email { get; set; }
-        private bool valid { get; set; }
+        private bool Valid { get; set; }
 
         public AddUser( int id ,string username, string pass, string passconf, string firstname, string lastname, string position, string email)
         {
@@ -144,10 +144,10 @@ namespace BusinessLogic
                 //   this.id = db.Users.Where(x => x.UserName == this.UserName).Select(x => x.UserId).FirstOrDefault();
                 
                 //valid = db.Users.Any(x => x.UserName == this.UserName);
-                valid = db.Users.Any((x => x.UserName == UserName && x.UserId != this.id));
+                Valid = db.Users.Any((x => x.UserName == UserName && x.UserId != this.id));
             }
 
-            if (valid != true)
+            if (Valid != true)
             {
                 AddNewUser();
             }

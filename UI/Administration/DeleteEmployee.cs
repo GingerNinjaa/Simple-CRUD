@@ -62,9 +62,6 @@ namespace UI.Administration
 
         private void btnDeleteUser_Click(object sender, EventArgs e)
         {
-            //when I select user name from combobox txtbox fill witch data 
-            //(FirstName and LastName)
-
 
             try
             {

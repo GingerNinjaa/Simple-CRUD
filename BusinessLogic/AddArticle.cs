@@ -9,6 +9,7 @@ namespace BusinessLogic
 {
    public  class AddArticle
     {
+        public bool Valid { get; set; }
         public string ArticleName { get; set; }
         public string ArticleDescription { get; set; }
         public Decimal Price { get; set; }
@@ -39,6 +40,46 @@ namespace BusinessLogic
                 db.SaveChanges();
             }
         }
+
+        public void EditArticle()
+        {
+            tblArticle model = new tblArticle();
+
+            using (DbModel db = new DbModel())
+            {
+                model.ArticleId = db.Articles.Where(x => x.ArticleName == this.ArticleName).Select(x => x.ArticleId).FirstOrDefault();
+                model.ArticleName = this.ArticleName;
+                model.ArticleDescription = this.ArticleDescription;
+                model.Price = this.Price;
+                model.ArticleCategory = this.ArticleCategory;
+
+                if (!db.Categories.Any(x => x.CategoryName == this.ArticleCategory))
+                {
+                    AddNewCategory();
+                }
+
+                db.Entry(model).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+            }
+        }
+        public void Add_or_edit()
+        {
+            using (DbModel db = new DbModel())
+            {
+                Valid = db.Articles.Any(x => x.ArticleName == this.ArticleName);
+            }
+
+            if (Valid != true)
+            {
+                NewArticle();
+            }
+            else
+            {
+                EditArticle();
+            }
+
+        }
+
         public void AddNewCategory()
         {
             using (DbModel db = new DbModel())

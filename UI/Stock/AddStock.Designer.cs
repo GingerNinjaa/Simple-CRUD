@@ -73,7 +73,7 @@
             this.btnAddArticle.Name = "btnAddArticle";
             this.btnAddArticle.Size = new System.Drawing.Size(140, 57);
             this.btnAddArticle.TabIndex = 2;
-            this.btnAddArticle.Text = "Add Article";
+            this.btnAddArticle.Text = "Submit";
             this.btnAddArticle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddArticle.UseVisualStyleBackColor = false;
             this.btnAddArticle.Click += new System.EventHandler(this.btnAddArticle_Click);
@@ -238,12 +238,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtAddProductName;
-        private System.Windows.Forms.TextBox txtAddProductDescription;
-        private System.Windows.Forms.TextBox txtAddProductPrice;
-        private System.Windows.Forms.ComboBox cbAddProductCategory;
- //       private CompanyDBDataSet_Category companyDBDataSet_Category;
- //       private CompanyDBDataSet_CategoryTableAdapters.tblCategoryTableAdapter tblCategoryTableAdapter;
+        public System.Windows.Forms.TextBox txtAddProductName;
+        public System.Windows.Forms.TextBox txtAddProductDescription;
+        public System.Windows.Forms.TextBox txtAddProductPrice;
+        public System.Windows.Forms.ComboBox cbAddProductCategory;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label6;
     }
