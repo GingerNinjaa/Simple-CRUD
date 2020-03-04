@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Validation;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -76,6 +77,10 @@ namespace UI.Administration
             {
                 Change();
                 this.Alert("Password changed", Messages.enmType.Success);
+            }
+            catch (DbEntityValidationException)
+            {
+                this.Alert("Fill all spaces", Messages.enmType.Error);
             }
             catch (Exception ex)
             {

@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using UI.Common;
 using Data;
+using System.Data.Entity.Validation;
 
 namespace UI.Administration
 {
@@ -69,6 +70,10 @@ namespace UI.Administration
                 AllEmployee mtp = new AllEmployee();
                 mtp.FillDataGrid();
 
+            }
+            catch (DbEntityValidationException)
+            {
+                this.Alert("Fill all spaces", Messages.enmType.Error);
             }
             catch (Exception ex)
             {

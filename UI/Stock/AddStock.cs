@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using UI.Common;
 using BusinessLogic;
 using Data;
+using System.Data.Entity.Validation;
 
 namespace UI.Stock
 {
@@ -83,6 +84,10 @@ namespace UI.Stock
                 ClearBoard();
                 FillComboBox();
                 this.Alert("Success", Messages.enmType.Success);  //Messages.Messages.enmType.Success
+            }
+            catch (DbEntityValidationException)
+            {
+                this.Alert("Fill all spaces", Messages.enmType.Error);
             }
             catch (Exception ex)
             {
