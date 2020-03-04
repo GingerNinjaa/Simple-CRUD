@@ -54,7 +54,7 @@ namespace UI.Administration
         {
             using (DbModel db = new DbModel())
             {
-                cbDeleteUser.DataSource = db.Users.ToList();
+                cbDeleteUser.DataSource = db.Users.Where(x => x.Position != "GM").ToList();
                 cbDeleteUser.ValueMember = "UserId";
                 cbDeleteUser.DisplayMember = "UserName";
             }

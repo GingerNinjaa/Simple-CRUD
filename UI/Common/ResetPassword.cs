@@ -99,8 +99,9 @@ namespace UI.Common
             catch (Exception ex)
             {
 
-                this.Alert(ex.Message, Messages.enmType.Success);
+                this.Alert(ex.Message, Messages.enmType.Error);
             }
+
             var login = new Login();
             login.Show();
             this.Hide();

@@ -40,17 +40,18 @@ namespace Mail
             MailMessage mail = new MailMessage();
             SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
-            mail.From = new MailAddress("damian.lewandowski.dev@gmail.com");
+            mail.From = new MailAddress("YourEmail");
             mail.To.Add(this.UserEmail);
             mail.Subject = "Test Mail";
             mail.Body = $"It looks like you've forgotten your password. \n\n\n" +
                         $"Here is your password " + this.Password;
 
             SmtpServer.Port = 587;
-            SmtpServer.Credentials = new System.Net.NetworkCredential("damian.lewandowski.dev@gmail.com", "YourPassword");
+            SmtpServer.Credentials = new System.Net.NetworkCredential("YourEmail", "YourPassword");
             SmtpServer.EnableSsl = true;
 
-            SmtpServer.Send(mail);
+           // SmtpServer.Send(mail);
+            SmtpServer.SendMailAsync(mail);
         }
 
 

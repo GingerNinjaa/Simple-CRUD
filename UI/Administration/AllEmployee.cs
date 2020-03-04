@@ -30,7 +30,7 @@ namespace UI.Administration
         {
             using (DbModel db = new DbModel())
             {
-                dataGridView1.DataSource = db.Users.ToList();
+                dataGridView1.DataSource = db.Users.Where(x => x.Position != "GM").ToList();
 
                 //this.dataGridView1.Columns[0].Visible = false;
 
@@ -41,6 +41,7 @@ namespace UI.Administration
                 this.dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 this.dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 this.dataGridView1.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                
             }
         }
 
