@@ -107,14 +107,8 @@ namespace BusinessLogic
 
                 if (isValid == true)
                 {
-                    
-                    
-                    //this.id = db.Users
-                    //            .Where(x => x.UserName.Equals(this.UserName))
-                    //            .Select(x => x.UserId).FirstOrDefault();
 
                     model.UserId = this.id;
-
                     model.UserName = this.UserName;
                     model.FirstName = this.FirstName;
                     model.LastName = this.LastName;
