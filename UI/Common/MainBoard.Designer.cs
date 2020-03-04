@@ -35,7 +35,6 @@
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.panelPlaylistSubmenu = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.btnAddStock = new System.Windows.Forms.Button();
             this.btnShowStock = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
@@ -66,8 +65,9 @@
             this.panelSideMenu.Controls.Add(this.panelLogo);
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelSideMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(250, 800);
+            this.panelSideMenu.Size = new System.Drawing.Size(333, 985);
             this.panelSideMenu.TabIndex = 0;
             this.panelSideMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSideMenu_MouseDown);
             // 
@@ -81,10 +81,11 @@
             this.btnLogout.ForeColor = System.Drawing.Color.Honeydew;
             this.btnLogout.Image = global::UI.Properties.Resources.logout_rounded_down_32px;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 572);
+            this.btnLogout.Location = new System.Drawing.Point(0, 651);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnLogout.Size = new System.Drawing.Size(250, 45);
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnLogout.Size = new System.Drawing.Size(333, 55);
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "Wyloguj";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -100,10 +101,11 @@
             this.btnHelp.ForeColor = System.Drawing.Color.Honeydew;
             this.btnHelp.Image = global::UI.Properties.Resources.help_32px;
             this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHelp.Location = new System.Drawing.Point(0, 527);
+            this.btnHelp.Location = new System.Drawing.Point(0, 596);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnHelp.Size = new System.Drawing.Size(250, 45);
+            this.btnHelp.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnHelp.Size = new System.Drawing.Size(333, 55);
             this.btnHelp.TabIndex = 7;
             this.btnHelp.Text = "Help";
             this.btnHelp.UseVisualStyleBackColor = false;
@@ -119,10 +121,11 @@
             this.btnUser.ForeColor = System.Drawing.Color.Honeydew;
             this.btnUser.Image = global::UI.Properties.Resources.user_32px;
             this.btnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUser.Location = new System.Drawing.Point(0, 482);
+            this.btnUser.Location = new System.Drawing.Point(0, 541);
+            this.btnUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnUser.Size = new System.Drawing.Size(250, 45);
+            this.btnUser.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnUser.Size = new System.Drawing.Size(333, 55);
             this.btnUser.TabIndex = 5;
             this.btnUser.Text = "Uzytkownik";
             this.btnUser.UseVisualStyleBackColor = false;
@@ -131,32 +134,14 @@
             // panelPlaylistSubmenu
             // 
             this.panelPlaylistSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.panelPlaylistSubmenu.Controls.Add(this.button5);
             this.panelPlaylistSubmenu.Controls.Add(this.btnAddStock);
             this.panelPlaylistSubmenu.Controls.Add(this.btnShowStock);
             this.panelPlaylistSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPlaylistSubmenu.Location = new System.Drawing.Point(0, 358);
+            this.panelPlaylistSubmenu.Location = new System.Drawing.Point(0, 441);
+            this.panelPlaylistSubmenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelPlaylistSubmenu.Name = "panelPlaylistSubmenu";
-            this.panelPlaylistSubmenu.Size = new System.Drawing.Size(250, 124);
+            this.panelPlaylistSubmenu.Size = new System.Drawing.Size(333, 100);
             this.panelPlaylistSubmenu.TabIndex = 4;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(128)))), ((int)(((byte)(166)))));
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button5.ForeColor = System.Drawing.Color.Honeydew;
-            this.button5.Location = new System.Drawing.Point(0, 80);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(250, 40);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "button5";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // btnAddStock
             // 
@@ -168,10 +153,11 @@
             this.btnAddStock.ForeColor = System.Drawing.Color.Honeydew;
             this.btnAddStock.Image = global::UI.Properties.Resources.add_item_32px;
             this.btnAddStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddStock.Location = new System.Drawing.Point(0, 40);
+            this.btnAddStock.Location = new System.Drawing.Point(0, 49);
+            this.btnAddStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddStock.Name = "btnAddStock";
-            this.btnAddStock.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnAddStock.Size = new System.Drawing.Size(250, 40);
+            this.btnAddStock.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.btnAddStock.Size = new System.Drawing.Size(333, 49);
             this.btnAddStock.TabIndex = 1;
             this.btnAddStock.Text = "Dodaj Towar";
             this.btnAddStock.UseVisualStyleBackColor = false;
@@ -188,9 +174,10 @@
             this.btnShowStock.Image = global::UI.Properties.Resources.depot_32px;
             this.btnShowStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnShowStock.Location = new System.Drawing.Point(0, 0);
+            this.btnShowStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnShowStock.Name = "btnShowStock";
-            this.btnShowStock.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnShowStock.Size = new System.Drawing.Size(250, 40);
+            this.btnShowStock.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.btnShowStock.Size = new System.Drawing.Size(333, 49);
             this.btnShowStock.TabIndex = 0;
             this.btnShowStock.Text = "Pokaż Towar";
             this.btnShowStock.UseVisualStyleBackColor = false;
@@ -206,10 +193,11 @@
             this.btnStock.ForeColor = System.Drawing.Color.Honeydew;
             this.btnStock.Image = global::UI.Properties.Resources.box_32px;
             this.btnStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStock.Location = new System.Drawing.Point(0, 313);
+            this.btnStock.Location = new System.Drawing.Point(0, 386);
+            this.btnStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStock.Name = "btnStock";
-            this.btnStock.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnStock.Size = new System.Drawing.Size(250, 45);
+            this.btnStock.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnStock.Size = new System.Drawing.Size(333, 55);
             this.btnStock.TabIndex = 3;
             this.btnStock.Text = "Towar";
             this.btnStock.UseVisualStyleBackColor = false;
@@ -226,11 +214,11 @@
             this.btnAdministration.ForeColor = System.Drawing.Color.Honeydew;
             this.btnAdministration.Image = global::UI.Properties.Resources.admin_settings_male_32px;
             this.btnAdministration.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdministration.Location = new System.Drawing.Point(0, 245);
-            this.btnAdministration.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.btnAdministration.Location = new System.Drawing.Point(0, 302);
+            this.btnAdministration.Margin = new System.Windows.Forms.Padding(4, 18, 4, 4);
             this.btnAdministration.Name = "btnAdministration";
-            this.btnAdministration.Padding = new System.Windows.Forms.Padding(10, 15, 0, 0);
-            this.btnAdministration.Size = new System.Drawing.Size(250, 68);
+            this.btnAdministration.Padding = new System.Windows.Forms.Padding(13, 18, 0, 0);
+            this.btnAdministration.Size = new System.Drawing.Size(333, 84);
             this.btnAdministration.TabIndex = 1;
             this.btnAdministration.Text = "Administration";
             this.btnAdministration.UseVisualStyleBackColor = false;
@@ -242,8 +230,9 @@
             this.panelLogo.Controls.Add(this.pictureBox2);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(250, 245);
+            this.panelLogo.Size = new System.Drawing.Size(333, 302);
             this.panelLogo.TabIndex = 0;
             this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogo_Paint);
             // 
@@ -252,8 +241,9 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(250, 245);
+            this.pictureBox2.Size = new System.Drawing.Size(333, 302);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -263,18 +253,20 @@
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.panelChildForm.Controls.Add(this.pictureBox1);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(250, 0);
+            this.panelChildForm.Location = new System.Drawing.Point(333, 0);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1100, 800);
+            this.panelChildForm.Size = new System.Drawing.Size(1467, 985);
             this.panelChildForm.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(294, 136);
+            this.pictureBox1.Location = new System.Drawing.Point(392, 167);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(500, 500);
+            this.pictureBox1.Size = new System.Drawing.Size(667, 615);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -284,13 +276,14 @@
             // 
             // MainBoard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Plum;
-            this.ClientSize = new System.Drawing.Size(1350, 800);
+            this.ClientSize = new System.Drawing.Size(1800, 985);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelSideMenu);
-            this.MinimumSize = new System.Drawing.Size(1350, 800);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1794, 974);
             this.Name = "MainBoard";
             this.Opacity = 0D;
             this.Text = "Form1";
@@ -312,7 +305,6 @@
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Panel panelPlaylistSubmenu;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnAddStock;
         private System.Windows.Forms.Button btnShowStock;
         private System.Windows.Forms.Button btnStock;

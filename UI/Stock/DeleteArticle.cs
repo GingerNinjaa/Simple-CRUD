@@ -110,5 +110,10 @@ namespace UI.Stock
         {
             this.Visible = false;
         }
+
+        private void DeleteArticle_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
