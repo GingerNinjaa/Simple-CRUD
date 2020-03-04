@@ -51,7 +51,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>36A5229454051597608CA4CB0F19233A9AEFAFF2</ManifestCertificateThumbprint>
@@ -70,6 +70,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -266,6 +269,10 @@
     <ProjectReference Include="..\Data\Data.csproj">
       <Project>{E146A728-0E53-4ED3-90C0-B79EF060886D}</Project>
       <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mail\Mail.csproj">
+      <Project>{6BCC7DD5-9486-4AE9-A2F2-E20F1DAF9B1B}</Project>
+      <Name>Mail</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 //Przesuwanie okien PART 1
 using System.Runtime.InteropServices;
-
+using Mail;
 
 namespace UI.Common
 {
@@ -89,6 +89,9 @@ namespace UI.Common
         private void btnResetPassword_Click(object sender, EventArgs e)
         {
             this.Hide();
+
+            SendMail mail = new SendMail();
+            mail.Send();
 
             var login = new Login();
             login.Show();
