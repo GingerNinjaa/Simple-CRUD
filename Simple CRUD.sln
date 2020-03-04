@@ -20,6 +20,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9552F6BA-6036-4371-8991-C9E5D963F230}"
 	ProjectSection(SolutionItems) = preProject
 		Database.sql = Database.sql
+		ReadMe.txt = ReadMe.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mail", "Mail\Mail.csproj", "{6BCC7DD5-9486-4AE9-A2F2-E20F1DAF9B1B}"
