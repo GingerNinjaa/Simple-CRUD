@@ -54,20 +54,20 @@ namespace UI.Common
         private void txtLogin_Enter(object sender, EventArgs e)
         {
             //Jeśli pole zawiera User To zamien to na puste pole
-            if (txtEmail.Text == "USER")
+            if (txtChangePassUser.Text == "USER")
             {
-                txtEmail.Text = "";
-                txtEmail.ForeColor = Color.LightGray;
+                txtChangePassUser.Text = "";
+                txtChangePassUser.ForeColor = Color.LightGray;
             }
         }
 
         private void txtLogin_Leave(object sender, EventArgs e)
         {
             // jeśli pole jest puste to wpisz tam "USER"
-            if (txtEmail.Text == "")
+            if (txtChangePassUser.Text == "")
             {
-                txtEmail.Text = "USER";
-                txtEmail.ForeColor = Color.DimGray;
+                txtChangePassUser.Text = "USER";
+                txtChangePassUser.ForeColor = Color.DimGray;
             }
         }
 
@@ -88,14 +88,28 @@ namespace UI.Common
 
         private void btnResetPassword_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            string username = txtChangePassUser.Text;
+            SendMail mail = new SendMail(username);
 
-            SendMail mail = new SendMail();
-            mail.Send();
+            try
+            {
+                mail.Send();
+                this.Alert("Check your mailbox", Messages.enmType.Success);
+            }
+            catch (Exception ex)
+            {
 
+                this.Alert(ex.Message, Messages.enmType.Success);
+            }
             var login = new Login();
             login.Show();
-            this.Alert("Check your mailbox", Messages.enmType.Success);
+            this.Hide();
+
+        }
+
+        private void txtChangePassUser_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

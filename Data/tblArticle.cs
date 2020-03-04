@@ -11,9 +11,15 @@ namespace Data
     {
         [Key]
         public int ArticleId { get; set; }
+        [Required]
+        [MaxLength(50)]
         public string ArticleName { get; set; }
+        [Required]
         public string ArticleDescription { get; set; }
+        [Required]
         public Decimal Price { get; set; }
+        [Required]
+        [MaxLength(50)]
         public string ArticleCategory { get; set; }
 
     }

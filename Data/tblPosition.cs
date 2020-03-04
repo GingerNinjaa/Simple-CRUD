@@ -13,6 +13,8 @@ namespace Data
     {
         [Key]
         public int PositionId { get; set; }
+        [Required]
+        [MaxLength(50)]
         public string PositionName { get; set; }
     }
 }

@@ -8,13 +8,9 @@ namespace Data
 
     public partial class DbModel : DbContext
     {
-       
-
         public virtual DbSet<tblUser> Users { get; set; }
         public virtual DbSet<tblCategory> Categories { get; set; }
         public virtual DbSet<tblPosition> Positions { get; set; }
         public virtual DbSet<tblArticle> Articles { get; set; }
-
-
     }
 }
