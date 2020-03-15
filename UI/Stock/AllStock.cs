@@ -42,7 +42,7 @@ namespace UI.Stock
             {
                 AllStockDataGridView.DataSource = db.Articles.ToList();
 
-                this.AllStockDataGridView.Columns[0].Visible = false;
+                this.AllStockDataGridView.Columns[0].Visible = false; 
                 this.AllStockDataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 this.AllStockDataGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 this.AllStockDataGridView.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -53,14 +53,21 @@ namespace UI.Stock
         private void timer1_Tick(object sender, EventArgs e)
         {
                  
-            FillDataGrid();
+           // FillDataGrid();
         }
 
-        private void AllStockDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+     
+
+        private void btnDeleteArticle_Click(object sender, EventArgs e)
+        {
+            deleteArticle.Visible = !deleteArticle.Visible;
+        }
+
+        private void AllStockDataGridView_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             addStock.Visible = !addStock.Visible;
 
-            int id = Convert.ToInt32(this.AllStockDataGridView.SelectedRows[0].Cells[0].Value.ToString());
+            int id = Convert.ToInt32(this.AllStockDataGridView.CurrentRow.Cells[0].Value);
 
             using (DbModel db = new DbModel())
             {
@@ -74,11 +81,6 @@ namespace UI.Stock
                 addStock.cbAddProductCategory.Text = model.ArticleCategory;
 
             }
-        }
-
-        private void btnDeleteArticle_Click(object sender, EventArgs e)
-        {
-            deleteArticle.Visible = !deleteArticle.Visible;
         }
     }
 }

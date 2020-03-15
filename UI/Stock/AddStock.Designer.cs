@@ -95,12 +95,12 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
             this.label2.ForeColor = System.Drawing.Color.Honeydew;
-            this.label2.Location = new System.Drawing.Point(224, 57);
+            this.label2.Location = new System.Drawing.Point(199, 59);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 39);
+            this.label2.Size = new System.Drawing.Size(294, 39);
             this.label2.TabIndex = 14;
-            this.label2.Text = "Add Article";
+            this.label2.Text = "Add or Edit Article";
             // 
             // label1
             // 

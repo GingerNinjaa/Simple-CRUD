@@ -34,7 +34,6 @@ namespace Mail
                                       .Where(x => x.UserName == this.UserName)
                                       .Select(x => x.Password)
                                       .FirstOrDefault();
-
             }
 
             MailMessage mail = new MailMessage();
@@ -44,7 +43,8 @@ namespace Mail
             mail.To.Add(this.UserEmail);
             mail.Subject = "Test Mail";
             mail.Body = $"It looks like you've forgotten your password. \n\n\n" +
-                        $"Here is your password " + this.Password;
+                        $"Here is your password => " + this.Password + "\n\n" +
+                        " Have a nice day :)";
 
             SmtpServer.Port = 587;
             SmtpServer.Credentials = new System.Net.NetworkCredential("YourEmail", "YourPassword");

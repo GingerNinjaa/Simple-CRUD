@@ -112,5 +112,12 @@ namespace UI.Common
         {
 
         }
+
+        private void ResetGoback_Click(object sender, EventArgs e)
+        {
+            var login = new Login();
+            login.Show();
+            this.Hide();
+        }
     }
 }
